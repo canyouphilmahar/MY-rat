@@ -7,7 +7,7 @@
   "codeblock_type": "small",
 
   "ip_ratelimit": 1000,
-  "reset_ratelimit_after": 1,
+  "reset_ratelimit_after": 0,
 
   "mc_embed_color": "FF031A",
   "mc_embed_title": "Minecraft Info",
