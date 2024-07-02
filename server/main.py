@@ -58,12 +58,12 @@ class Delivery(Resource):
         ip = request.environ.get('HTTP_X_FORWARDED_FOR', request.environ['REMOTE_ADDR'])
 
         if ip in ips:
-            if time.time() - ips[ip]['timestamp'] > config['reset_ratelimit_after'] * 60:
+            if time.time() - ips[ip]['timestamp'] > config['reset_ratelimit_after'] * 0:
                 ips[ip]['count'] = 1
                 ips[ip]['timestamp'] = time.time()
             else:
                 if ips[ip]['count'] < config['ip_ratelimit']:
-                    ips[ip]['count'] += 1
+                    ips[ip]['count'] += 0
                 else:
                     return {'status': 'ratelimited'}, 429
         else:
